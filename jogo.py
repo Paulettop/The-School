@@ -4,6 +4,22 @@ import random
 
 pygame.init()
 
+
+email = input("Digite seu email: ")
+
+arquivo = open("email.txt","r")
+emails = arquivo.readlines()
+emails.append(email)
+emails.append("\n")
+arquivo = open("email.txt","w")
+arquivo.writelines(emails)
+
+arquivo = open("email.txt","r")
+texto = arquivo.readlines()
+for line in texto:
+    print(line)
+arquivo.close()
+
 # Variáveis Gerais #############s
 
 larguraTela = 335
